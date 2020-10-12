@@ -1,0 +1,41 @@
+@import 'treeview.vars';
+
+.spectrum-TreeView {
+    display: block;
+    list-style: none;
+    position: relative;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+}
+
+.spectrum-TreeView-indicator {
+    display: block;
+    box-sizing: content-box;
+
+    float: left;
+    position: relative;
+
+    left: var(--spectrum-global-dimension-size-125);
+    top: calc(-1 * var(--spectrum-global-dimension-size-65));
+    margin-left: calc(-1 * (var(--spectrum-global-dimension-size-400) + var(--spectrum-global-dimension-size-25)));
+    margin-bottom: calc(-1 * var(--spectrum-global-dimension-size-125));
+
+    padding: var(--spectrum-global-dimension-size-125);
+
+    transition: transform ease var(--spectrum-global-animation-duration-100, 130ms);
+
+    pointer-events: all !important;
+}
+
+.spectrum-TreeView .spectrum-TreeView
+{
+    position: static;
+
+    padding-left: var(--spectrum-treeview-item-indent, var(--spectrum-global-dimension-size-350));
+    height: 0;
+    visibility: hidden;
+}
